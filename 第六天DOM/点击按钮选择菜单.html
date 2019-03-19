@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<input type="button" value="点菜" id="btn">
+<select name="" id="ss">
+    <option value="1">苹果</option>
+    <option value="2">梨子</option>
+    <option value="3">葡萄</option>
+    <option value="4" id="op1">西瓜</option>
+    <option value="5">菠萝</option>
+    <option value="6">番茄</option>
+</select>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        my$("op1").selected = true;
+    };
+</script>
+<textarea name="" id="tt" cols="30" rows="10">
+        《三国演义》是中日两国合作制作的动画片，已于2009年在中国上映。该动画片是根据中国古代名著《三国演义》改编，由北京辉煌动画、央视动画与日本未来行星株式会社联手打造的高...
+   </textarea>
+<input type="button" value="注册" id="btn1">
+<script>
+    my$("btn1").onclick = function () {
+        my$("tt").value = "嘎嘎" //推荐使用value修改内容
+        //my$("tt").innerText="哈哈"
+    };
+</script>
+
+</body>
+
+</html>

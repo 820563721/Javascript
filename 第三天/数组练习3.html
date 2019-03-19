@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<script>
+    //循环输入每个人的成绩
+    var perCount = parseInt(prompt("请输入班级人数"));
+    var perScores = [];
+    for (var i = 0; i < perCount; i++) {
+        perScores[perScores.length] = parseInt(prompt("请输入第" + (i + 1) + "个人的成绩:"));
+    }
+    //求总成绩的平均值，最高分，最低分
+    var sum = 0;
+    var avg = 0;
+    var max = perScores[0];
+    var min = perScores[0];
+    for (var i = 0; i < perScores.length; i++) {
+        sum += perScores[i];
+        avg += sum / perCount;
+        if (max < perScores[i]) {
+            max = perScores[i];
+        }
+        if (min > perScores[i]) {
+            min = perScores[i];
+        }
+
+    }
+    console.log("总成绩：" + sum);
+    console.log("平均成绩：" + avg);
+    console.log("最高分：" + max);
+    console.log("最低分：" + min);
+
+</script>
+</body>
+</html>

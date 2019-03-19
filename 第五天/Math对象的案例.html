@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // var result = Math.max(10,20,30,40,50);
+    // console.log(result);
+
+    //自己定义一个对象，实现系统max对象的方法
+    function MyMath() {
+        this.getMax = function () {
+            var max = arguments[0];
+            for (var i = 0; i < arguments.length; i++) {
+                if (max < arguments[i]) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        };
+    }
+
+    var mt = new MyMath();
+    var result = mt.getMax(10, 20, 30, 40, 50);
+    console.log(result);
+
+</script>
+</body>
+</html>

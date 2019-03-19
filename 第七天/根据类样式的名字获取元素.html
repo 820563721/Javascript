@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 10px;
+        }
+
+        .cls {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<p class="cls">第一个</p><br>
+<p>第二个</p><br>
+<span class="cls">第一个</span><br>
+<span>第二个</span><br>
+<div class="cls">第一个</div>
+<br>
+<div>第二个</div>
+<br>
+<input type="button" value="变" id="btn">
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        var list = document.getElementsByClassName("cls");
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.backgroundColor = "green";
+        }
+    }
+</script>
+</body>
+</html>

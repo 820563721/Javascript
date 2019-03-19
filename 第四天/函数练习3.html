@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //输入年月日，计算过去了多少天
+    function isLeapYear(year) {
+        return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    }
+
+    function getDay(year, month, day) {
+        var days = day;
+        if (month == 1) {
+            return days;
+        }
+        var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        for (var i = 0; i < month - 1; i++) {
+            days += months[i];
+        }
+        if (isLeapYear(year)) {
+            days++;
+        }
+        return days;
+    }
+
+    console.log(getDay(2019, 8, 23));
+
+
+</script>
+</body>
+</html>

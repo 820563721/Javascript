@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //函数的定义
+    function consoleSum(x, y) {
+        var sum = x + y;
+        console.log(sum);
+    }
+
+    consoleSum(200, 200);
+
+    function consoleSum1(x, y) {
+        return x + y;
+    }
+
+    var result1 = parseInt(prompt("请输入第一个数字"));
+    var result2 = parseInt(prompt("请输入第二个数字"));
+    var result = consoleSum1(result1, result2);
+    console.log(result);
+</script>
+</body>
+</html>

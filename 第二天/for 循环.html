@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<script>
+    /*
+    * for(表达式1；表达式2；表达式3){
+    *  循环体；
+    * }
+    *
+    *先执行表达式1，判断表达式2，不成立直接跳出循环，成立则执行循环体
+    * 执行完循环体再执行表达式3.
+    * 执行完表达式3后调到表达式2继续判断。成立则执行while，不成立则跳出循环。
+    *
+    * */
+    for (var i = 0; i < 10; i++) {
+        console.log("我又帅了" + (i));
+    }
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        sum += i;
+    }
+    console.log(sum);
+    求1 - 100
+    之间偶数的和
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
+    求1 - 100
+    之间奇数的和
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 2 != 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
+    1 - 100
+    之间能被3整除的和
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
+    1 - 100
+    之间能被7整除的和
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 7 == 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
+
+</script>
+</body>
+</html>
+
+
+x =0 ;
+for (i =1 ; i<=100;i=i+1){
+x=x+i;
+}
+求x 的值

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .cls {
+            display: none;
+        }
+    </style>
+
+
+</head>
+<body>
+<input type="button" value="隐藏" id="btn">
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        if (my$("dv").className != "cls") {
+            my$("dv").className = "cls";
+            this.value = "显示"
+        } else {
+            my$("dv").className = "";
+            this.value = "隐藏"
+        }
+    };
+</script>
+</body>
+</html>

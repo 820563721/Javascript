@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<a href="http://www.qq.com" id="ak">QQ</a>
+<input type="button" value="点我" id="btn">
+<input type="text" value="文本框" id="txt">
+<input type="button" value="变色" id="btn1">
+
+<ul id="xx">
+    <li>哈哈</li>
+    <li>哈哈</li>
+    <li>哈哈</li>
+</ul>
+<script>
+    document.getElementById("btn").onclick = function () {
+        document.getElementById("txt").disabled = true;
+
+    };
+    document.getElementById("ak").onclick = function () {
+        alert("点我干嘛");
+        return false;
+    };
+    document.getElementById("btn1").onclick = function () {
+        document.getElementById("xx").style.backgroundColor = "yellow";
+    };
+</script>
+</body>
+</html>

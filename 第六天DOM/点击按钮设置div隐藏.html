@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        input {
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="隐藏" id="btn">
+<br>
+<br>
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        if (this.value == "隐藏") {
+            my$("dv").style.display = "none";
+            this.value = "显示";
+        } else if (this.value == "显示") {
+            my$("dv").style.display = "block";
+            this.value = "隐藏";
+        }
+    };
+</script>
+</body>
+</html>

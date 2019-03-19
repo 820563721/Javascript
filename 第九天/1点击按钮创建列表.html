@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<input type="button" value="创建列表" id="btn">
+<div id="dv"></div>
+<script src="../common.js"></script>
+<script>
+    var names = ["A", "B", "C", "D", "E", "F", "G"];
+    my$("btn").onclick = function () {
+        var str = "<ul>";
+        for (var i = 0; i < names.length; i++) {
+            str += "<li>" + names[i] + "</li>";
+        }
+        str += "</ul>"
+        my$("dv").innerHTML = str;
+    }
+
+</script>
+</body>
+</html>

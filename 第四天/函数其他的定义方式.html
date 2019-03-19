@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //函数表达式，把一个匿名函数给一个变量，则这个函数是函数表达式
+    //函数表达式后加分号结束;
+
+    function f1(fn) {
+        fn();
+    }
+
+    function f2() {
+        console.log("哈哈你怕是个傻子");
+    }
+
+    f1(f2);
+
+
+</script>
+</body>
+</html>

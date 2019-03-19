@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<input type="button" id="btn" value="变色">
+<ul id="uu">
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+    <li>haha</li>
+</ul>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        var list = my$("uu").getElementsByTagName("li");
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.backgroundColor = i % 2 == 0 ? "red" : "yellow";
+        }
+    };
+</script>
+</body>
+</html>

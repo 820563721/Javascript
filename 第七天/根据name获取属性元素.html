@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<input type="button" value="变" id="btn"><br>
+<input type="text" value="吃屁" name="name1"><br>
+<input type="text" value="吃屁" name="name1"><br>
+<input type="text" value="吃屁" name="name2"><br>
+<input type="text" value="吃屁" name="name1"><br>
+<input type="text" value="吃屁" name="name3"><br>
+<input type="text" value="吃屁" name="name1"><br>
+<input type="text" value="吃屁" name="name1"><br>
+<script src="common.js"></script>
+<script>
+    my$("btn").onclick = function () {
+        var list = document.getElementsByName("name1");
+        for (var i = 0; i < list.length; i++) {
+            list[i].value = "你好啊";
+        }
+    }
+</script>
+</body>
+</html>

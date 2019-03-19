@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<script>
+    //冒泡序列//把数列 中的数字从小到大以此排序
+    var arr = [10, 2, 30, 56, 0, 510];
+    //控制比较轮数
+    for (var i = 0; i < arr.length - 1; i++) {
+        //控制每一轮比较的次数
+        for (var j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j] < arr[j + 1]) {
+                var temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

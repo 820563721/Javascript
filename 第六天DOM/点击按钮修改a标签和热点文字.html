@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<a href="https://www.baidu.com" id="a1">百度</a>
+
+
+<script>
+    document.getElementById("btn").onclick = function () {
+        var a1Obj = document.getElementById("a1");
+        a1Obj.innerText = "腾讯";
+        a1Obj.href = "https://www.qq.com";
+
+    };
+</script>
+</body>
+</html>

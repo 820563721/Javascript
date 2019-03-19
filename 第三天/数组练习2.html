@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<script>
+    var names = ["小a", "小b", "小c", "小d", "小e", "小f"];
+    var sum = "";
+    for (var i = 1; i < names.length; i++) {
+        sum += "|" + names[i];
+    }
+    console.log(names[0] + sum);
+    //剔除数组中0的元素，组合新的数组
+    var arr = [10, 0, 20, 0, 30, 0, 50];
+    var newArray = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] != 0) {
+            newArray[newArray.length] = arr[i];
+        }
+    }
+    console.log(newArray);
+    //反转数组
+    var arr1 = [10, 20, 30, 40, 50];
+    for (var i = 0; i < arr1.length / 2; i++) {
+        var temp = arr1[i];
+        arr1[i] = arr1[arr1.length - 1 - i];
+        arr1[arr1.length - 1 - i] = temp;
+    }
+    console.log(arr1);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        ul {
+            list-style: none;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+<ul id="uu">
+    <li>第一名</li>
+    <li>第一名</li>
+    <li>第一名</li>
+    <li>第一名</li>
+    <li>第一名</li>
+</ul>
+<script src="common.js"></script>
+<script>
+    var list = my$("uu").getElementsByTagName("li");
+    for (var i = 0; i < list.length; i++) {
+        list[i].setAttribute("score", (i + 1) * 10);
+        list[i].onclick = function () {
+            alert(this.getAttribute("score"));
+        }
+    }
+</script>
+</body>
+</html>

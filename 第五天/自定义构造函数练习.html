@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //创建一个图片的对象
+    function Images(weight, height, size) {
+        this.name = name;
+        this.weight = weight;
+        this.height = height;
+        this.size = size;
+        this.content = function () {
+            console.log("猫在抓老鼠");
+        }
+    }
+
+    var obj = new Images("20px", "150px");
+    console.log(obj.weight);
+    console.log(obj.height);
+    obj.content()
+
+    //创建一个小猫的对象
+    function Cat(color, kg, age) {
+        this.name = name;
+        this.color = color;
+        this.kg = kg;
+        this.age = age;
+        this.action = function () {
+            console.log("抓老鼠");
+            console.log("打架");
+        }
+    }
+
+    var obj1 = new Cat("yellow", "5kg", "2years");
+    console.log(obj1.color);
+    console.log(obj1.kg);
+    console.log(obj1.age);
+    obj1.action();
+
+
+</script>
+</body>
+</html>

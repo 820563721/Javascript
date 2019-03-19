@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    *90-100 A
+    * 80-90 B
+    * 70-80 C
+    * 60-70 D
+    *0-60 E
+    *
+    // * */
+    // var score = parseInt(prompt("请输入成绩"));
+    // if (!isNaN(score)){
+    //     if (score > 90 && score<= 100){
+    //         console.log("A级");
+    //     }
+    //     else if (score > 80) {
+    //         console.log("B级");
+    //     }
+    //     else if (score > 70) {
+    //         console.log("C级");
+    //     }
+    //     else if (score > 60) {
+    //         console.log("D级");
+    //     }
+    //     else {
+    //         console.log("E级");
+    //     }
+    // }else {
+    //     console.log("你输入的有误");
+    // }
+    var year = parseInt(prompt("请输入年份"));
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        console.log("闰年");
+    }
+    else {
+        console.log("平年");
+    }
+
+</script>
+</body>
+</html>

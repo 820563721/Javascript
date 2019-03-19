@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        ul {
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul id="uu">
+    <li>哈哈</li>
+    <li>哈哈</li>
+    <li>哈哈</li>
+    <li>哈哈</li>
+    <li>哈哈</li>
+</ul>
+<script src="common.js"></script>
+<script>
+    var list = my$("uu").getElementsByTagName("li");
+    for (var i = 0; i < list.length; i++) {
+        list[i].onmouseover = function () {
+            this.style.backgroundColor = "red";
+        }
+        list[i].onmouseout = function () {
+            this.style.backgroundColor = "";
+        };
+    }
+    ;
+</script>
+</body>
+</html>

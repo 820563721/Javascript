@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<script>
+    //100-200之间奇数的和，用continue；
+    // var sum=0;
+    // var i=100;
+    // while (i<=200){
+    //     if (i%2==0){
+    //         i++;
+    //         continue;
+    //     }
+    //     sum+=i;
+    //     i++;
+    // }
+    // console.log(sum);
+    //求1-100的累加值，跳过个位3的数
+    var sum = 0;
+    var i = 100;
+    while (i <= 200) {
+        if (i % 10 == 3) {
+            i++;
+            continue;
+        }
+        sum += i;
+        i++;
+    }
+    console.log(sum);
+</script>
+</body>
+</html>

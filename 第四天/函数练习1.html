@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //数组反转
+    function reverseArray(arr) {
+        for (var i = 0; i < arr.length / 2; i++) {
+            var temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
+        }
+        return arr;
+    }
+
+    var arr = [10, 20, 30, 40, 50];
+    console.log(reverseArray(arr));
+
+    //冒泡排序
+    function sortArray(arr) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    var arr = [5, 659, 4894, 5464, 56, 3465, 156, 1];
+    console.log(sortArray(arr));
+
+
+</script>
+</body>
+</html>

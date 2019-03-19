@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+
+<body>
+<script>
+    // function consoleSum() {
+    //     var num1 = 10;
+    //     var num2 = 20;
+    //     var sum = num1 + num2;
+    //     console.log(sum);
+    // }
+
+    // consoleSum();
+    function consoleMax() {
+        var x = 10;
+        var y = 20;
+        console.log(x > y ? x : y);
+    }
+
+    consoleMax();
+
+    //1-100的和
+    function everySum() {
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);
+    }
+
+    everySum();
+
+    //求1-100偶数
+    function everyEven() {
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sum += i;
+            }
+        }
+        console.log(sum);
+    }
+
+    everyEven();
+
+    //1-100奇数的和
+    function everyOld() {
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                sum += i;
+            }
+        }
+        console.log(sum);
+    }
+
+    everyOld();
+
+    //求一个数组的和
+    function consoleArraySum() {
+        var sum = 0;
+        var arr = [10, 20, 30, 40, 50];
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        console.log(sum);
+    }
+
+    consoleArraySum();
+</script>
+</body>
+
+</html>

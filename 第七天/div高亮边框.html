@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            margin-left: 10px;
+            float: left;
+            background-color: gold;
+            /*border: 2px solid gold;*/
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script src="common.js"></script>
+<script>
+    var dvObj = document.getElementsByTagName("div");
+    for (var i = 0; i < dvObj.length; i++) {
+        dvObj[i].onmouseover = function () {
+            this.style.border = "2px solid red";
+        }
+        dvObj[i].onmouseout = function () {
+            this.style.border = "";
+        }
+    }
+</script>
+</body>
+</html>

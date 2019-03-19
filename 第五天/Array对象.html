@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    //Array.isArray(对象)----->判断这个对象是不是数组;
+    //join("字符串")----返回的是一个字符串
+
+    var arr = ["小红", "小苏", "小黄", "小黑", "小白"];
+    var str = arr.join("|");
+    console.log(str);
+    //reverse()------反转数组
+    var arr1 = [10, 20, 30, 40, 50];
+    arr1.reverse();
+    console.log(arr1);
+    //splice(开始的位置，要删除的个数，替换的元素的值);一般用于删除元素中值，或者
+    var months = ['Jan', 'March', 'April', 'June'];
+    months.splice(1, 0, 'Feb');
+    // inserts at 1st index position
+    console.log(months);
+    // expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+    months.splice(4, 1, 'May');
+    // replaces 1 element at 4th index
+    console.log(months);
+    // expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+</script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+<input type="button" value="按钮" id="btn"/>
+<script>
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick = function () {
+        alert("你别是个傻子吧");
+    };
+    document.getElementById("btn").onclick = function () {
+        alert("我又来了");
+    };
+</script>
+</body>
+
+</html>

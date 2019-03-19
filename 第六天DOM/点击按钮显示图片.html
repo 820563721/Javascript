@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="显示图片" id="btn"/>
+<img src="" alt="" id="im">
+<script>
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick = function () {
+        var imObj = document.getElementById("im");
+        imObj.src = "../images/图层133.png";
+        imObj.width = "300";
+        imObj.height = "400";
+    };
+
+</script>
+</body>
+</html>

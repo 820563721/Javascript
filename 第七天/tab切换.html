@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .hd {
+            height: 45px;
+        }
+
+        .hd span {
+            display: inline-block;
+            width: 90px;
+            background-color: pink;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hd span.current {
+            background-color: purple;
+        }
+
+        .bd li {
+            height: 255px;
+            background-color: purple;
+            display: none;
+        }
+
+        .bd li.current {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box" id="box">
+    <div class="hd">
+        <span class="current">体育</span>
+        <span>娱乐</span>
+        <span>新闻</span>
+        <span>综合</span>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="current">我是体育模块</li>
+            <li>我是娱乐模块</li>
+            <li>我是新闻模块</li>
+            <li>我是综合模块</li>
+        </ul>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+    //获取最外面的div
+    var box = my$("box");
+    //获取第一个div
+    var hd = box.getElementsByTagName("div")[0];
+    //获取第二个div
+    var bd = box.getElementsByTagName("div")[1];
+    //获取span标签
+    var spans = hd.getElementsByTagName("span");
+    var list = bd.getElementsByTagName("li");
+    //循环遍历每个span标签，添加点击事件
+    for (var i = 0; i < spans.length; i++) {
+        //自定义样式
+        spans[i].setAttribute("index", i);
+        spans[i].onclick = function () {
+            //所有的span样式移除
+            for (var j = 0; j < spans.length; j++) {
+                spans[j].removeAttribute("class")
+            }
+            this.className = "current";
+            //被点击的span添加样式
+            var num = this.getAttribute("index");
+            //获取所有li标签
+            for (var k = 0; k < list.length; k++) {
+                //隐藏所有样式
+                list[k].removeAttribute("class");
+            }
+            //被惦记的
+            list[num].className = "current";
+        }
+    }
+</script>
+
+</body>
+</html>
