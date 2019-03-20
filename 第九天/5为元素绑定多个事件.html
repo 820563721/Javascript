@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+
+<script src="../common.js"></script>
+<script>
+    //1  对象.addEventListener
+    //为元素绑定事件（DOM），不兼容,IE8不支持
+    //参数1.事件类型--事件名字
+    //参数2.事件处理函数---匿名函数
+    //参数3布尔类型，false
+
+    // my$("btn").addEventListener("click", function () {
+    //     console.log("A")
+    // }, false);
+    // my$("btn").addEventListener("click", function () {
+    //     console.log("B")
+    // }, false);
+    // my$("btn").addEventListener("click", function () {
+    //     console.log("C")
+    // }, false);
+    // my$("btn").addEventListener("click", function () {
+    //     console.log("D")
+    // }, false);
+    //2  对象.attachEvent
+    my$("btn").attachEvent("onclick",function () {
+        console.log("abd")
+    })
+</script>
+</body>
+</html>
