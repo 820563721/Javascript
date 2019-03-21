@@ -10,3 +10,12 @@ function addEventListener(element,type,fn) {
         element["on"+type]=fn;
     }
 }
+function removeEventListener(element,type,fnName) {
+    if(element.removeEventListener){
+        element.removeEventListener(type,fnName,false);
+    }else if (element.detachEvent){
+        element.detachEvent("on"+type,fnName);
+    }else {
+        element["on"+type]=null;
+    }
+}
