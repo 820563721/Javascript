@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #box {
+            position: relative;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<div id="box"></div>
+<script>
+    var btn = document.getElementById("btn");
+    btn.onclick = function () {
+        // var box = document.getElementById("box");
+        //获取当前盒子的位置  offsetLeft  offsetTop
+        // for (var i =0;i<100;i++){
+        //     box.style.left=box.offsetLeft+5+"px";
+        // }
+        var timeId = setInterval(function () {
+            var target = 500;
+            //步数
+            var step=2;
+            if (box.offsetLeft >= target) {
+                clearInterval(timeId);
+                box.style.left = target + "px";
+                return;
+            }
+            box.style.left = box.offsetLeft + step + "px";
+        }, 10)
+    };
+</script>
+</body>
+</html>
