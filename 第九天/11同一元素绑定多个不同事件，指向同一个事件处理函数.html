@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+</head>
+<body>
+<input type="button" value="ABC" id="btn">
+<script src="../common.js"></script>
+<script>
+    my$("btn").onclick=f1;
+    my$("btn").onmouseover=f1;
+    my$("btn").onmouseout=f1;
+    function f1(e) {
+        switch (e.type){
+            case "click":
+                alert("傻子吧");
+                break;
+            case "mouseover":
+                this.style.backgroundColor="red";
+                break;
+            case "mouseout":
+                this.style.backgroundColor="green";
+                break;
+        }
+    };
+</script>
+</body>
+</html>
