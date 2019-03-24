@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 100px auto;
+            position: relative;
+
+            overflow: hidden;
+
+            /* 不让文字被选中 */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .content {
+            padding: 5px 18px 5px 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .scroll {
+            width: 15px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #eee;
+        }
+
+        .bar {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: yellowgreen;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="content" id="content">
+        第1集 桃园结义
+        　　刘备、关羽和张飞三位仁人志士，为了共同干一番大事业的目标，意气相投，言行相依，选在一个桃花盛开的季节、选在一个桃花绚烂的园林，举酒结义，对天盟誓，有苦同受，有难同当，有福同享，共同实现自己人生的美好理想。从此三人开始行走天下。
+
+        第2集 董卓进京
+        　　外戚与宦官争权，互相攻杀，东汉王朝名存实亡，西凉刺史董卓带兵入京，大肆诛杀，废了汉少帝，立了九岁的汉献帝，自封相国，独掌大权。
+
+        第3集 三英战吕布
+        　　刘备有心抱负于天下，关羽、张飞二人各自身怀绝技，一直未得到展示，此前唯有关羽斩杀华雄初显本领。袁绍派出八路诸侯前往虎牢关迎敌，曹操引军于两关之间接应。吕布出战英勇无敌，刺死方悦、穆顺，砍伤武安国，又战败公孙瓒。张飞按捺不住，挺矛出战，与吕布酣战五十回合，不分胜负。关羽见了，把马一拍，舞八十二斤青龙偃月刀，来夹攻吕布。三匹马丁字儿厮杀，未能战败吕布。刘备举着双股剑，也来助战，兄弟三个围住吕布，四匹马就像走马灯一样厮杀在一起，吕布终于抵挡不住，败回虎牢关。
+
+        第4集 连环计
+        　　东汉末年，太师董卓专权，朝野上下敢怒不敢言。正直的大臣们都想除掉他，但又苦于无好计可施。司徒王允，深夜独自到花园，望着天空一轮明月，心想着国家大事，不觉悄然泪下，他忽然听见牡丹亭处有人长叹，走过去一看，原来是家中十六岁的美丽歌女貂蝉。当他得知貂蝉是为民忧愁时，便和她定下“连环计”：先将貂蝉许嫁吕布，再献与董卓，离间他们父子，促使吕布杀死董卓吕布狩猎归来，在溪边和貂蝉相遇，他见貂蝉貌美，如醉如痴。王允便将吕布请到府中，答应将貂蝉送与吕布为妾。“早晚选一良辰，送到将军府上。”乘吕布去郿坞押送车仗的机会，王允又将貂蝉献与董卓。
+
+        第5集 凤仪亭
+        　　吕布趁着董卓上朝，窥视貂蝉，并邀貂蝉到凤仪亭相会，貂蝉向吕布哭诉被董卓霸占之苦，吕布很是不满，对董卓产生怨恨。恰巧董卓回府，见到此情形，抢戟执向吕布，吕布逃走。凤仪亭从此二人相互猜忌，王允说董卓霸占貂蝉实在不该，吕布和王允计划一起除掉董卓，待董卓准备篡位的那天，吕突然倒戈，把董卓杀死。董卓死后，貂蝉独自离开，从此不再出现。
+
+    </div>
+    <div class="scroll" id="scroll">
+        <div class="bar" id="bar"></div>
+    </div>
+</div>
+<script src="../common.js"></script>
+<script>
+    //1、根据内容的大小，计算滚动条的长度
+    var box = my$("box");
+    var content = my$("content");
+    var bar = my$("bar");
+    var scroll = my$("scroll");
+    //滚动条的高度/scroll的高度=box的高度/内容的高度
+    //offsetHeight     元素的大小+padding+broder
+    //clientHeight     元素的大小+padding
+    //scrollHeight     元素的大小+padding
+    var barHeight = 0;
+    if (content.scrollHeight > box.clientHeight) {
+        barHeight = box.clientHeight / content.scrollHeight * scroll.clientHeight;
+    }
+    bar.style.height = barHeight + "px";
+
+    //2、让滚动条能够拖拽
+    bar.onmousedown = function (e) {
+        //鼠标在滚动条中的位置
+        var y = getPage(e).pageY - box.offsetTop - bar.offsetTop;
+        document.onmousemove = function (e) {
+            //滚动条的位置
+            var barY = getPage(e).pageY - y - box.offsetTop;
+            barY = barY < 0 ? 0 : barY;
+            barY = barY > scroll.clientHeight - bar.clientHeight ? scroll.clientHeight - bar.clientHeight : barY;
+            bar.style.top = barY + "px";
+            //3、当拖拽滚动条的时候，改变内容的位置
+            //bar移动的距离/bar最大能移动的距离=内容移动的距离/内容最大能移动的距离
+            //内容最大能移动的距离
+            var contentMax=content.scrollHeight-box.clientHeight;
+            //bar能移动最大的距离
+            var barMax=scroll.clientHeight-bar.clientHeight;
+            var contentY=barY*contentMax/barMax;
+            content.style.top=-contentY+"px";
+
+        }
+    }
+    document.onmouseup = function () {
+        document.onmousemove = null;
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

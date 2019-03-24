@@ -94,6 +94,11 @@
         maskY = maskY > box.offsetHeight - mask.offsetHeight ? box.offsetHeight - mask.offsetHeight : maskY;
         mask.style.left = maskX + "px";
         mask.style.top = maskY + "px";
+        //3当mask移动的时候，让大图片移动相同的比例距离
+        //求大图片移动的距离
+        //mask移动的距离/mask最大能移动的距离=大图片移动的距离/大图片最大能移动的距离
+
+        //mask最大能移动的距离
         var maskMax = box.offsetWidth - mask.offsetWidth;
         //大图片最大能移动的距离
         var bigImageMax = bigImage.offsetWidth - bigBox.offsetWidth;
@@ -103,11 +108,6 @@
         bigImage.style.left=-bigImageX+"px";
         bigImage.style.top=-bigImageY+"px";
     }
-    //3当mask移动的时候，让大图片移动相同的比例距离
-    //求大图片移动的距离
-    //mask移动的距离/mask最大能移动的距离=大图片移动的距离/大图片最大能移动的距离
-
-    //mask最大能移动的距离
 
 
 
