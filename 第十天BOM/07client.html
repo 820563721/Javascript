@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$课堂练习$</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            padding: 10px;
+            border: 10px solid red;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    //client
+    var box =document.getElementById("box");
+    //边框的宽度
+    //clientLeft=border-left clientTop=border-top;
+    console.log(box.clientLeft);
+    console.log(box.clientTop);
+    //获取大小
+    //包括padding，不包括边框
+    console.log(box.clientWidth);
+    console.log(box.clientHeight);
+</script>
+</body>
+</html>
