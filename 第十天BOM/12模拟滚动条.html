@@ -107,20 +107,17 @@
             //3、当拖拽滚动条的时候，改变内容的位置
             //bar移动的距离/bar最大能移动的距离=内容移动的距离/内容最大能移动的距离
             //内容最大能移动的距离
-            var contentMax=content.scrollHeight-box.clientHeight;
+            var contentMax = content.scrollHeight - box.clientHeight;
             //bar能移动最大的距离
-            var barMax=scroll.clientHeight-bar.clientHeight;
-            var contentY=barY*contentMax/barMax;
-            content.style.top=-contentY+"px";
+            var barMax = scroll.clientHeight - bar.clientHeight;
+            var contentY = barY * contentMax / barMax;
+            content.style.top = -contentY + "px";
 
         }
     }
     document.onmouseup = function () {
         document.onmousemove = null;
     }
-
-
-
 
 
 </script>
